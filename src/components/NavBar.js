@@ -4,7 +4,7 @@ import {  Button } from 'react-bootstrap'
 
 const NavBar = props => {
   return (
-    <div style={{ borderBottom: '2px solid black', paddingBottom: '10px', marginBottom: '12px', marginLeft: '12px', marginRight: '10px'}}>
+    <div className="NavBar">
       <Button bsStyle="default" bsSize="small" active>
         <NavLink 
           style={{ marginRight: '10px' }} 

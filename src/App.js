@@ -16,15 +16,17 @@ class App extends Component {
           <Router>
             <div className="App">
               <NavBar />
-              <Route exact path="/" render={() => <div>Home</div>} />
+              <Route exact path="/"  />
               <Route path='/contact'  />
             </div>
         </Router>
         </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+       <div className="heroImage-container" id="fullwidth"> 
+        <img
+            src={'http://www.returnofkings.com/wp-content/uploads/2015/01/american-hero1.jpg'} className="heroImage"
+        />
+       </div>
+       </div>
     );
   }
 }
