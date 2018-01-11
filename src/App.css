@@ -42,6 +42,32 @@
   padding: 20px;
 }
 
+.footer{ 
+  background: grey;
+  padding: 20px;
+  height: 50px;
+  position: relative;
+}
+
+.footer-links{
+  font-size: 10px;
+  float: right;
+  text-align: left;
+}
+
+.footer-links a:first-child{
+    margin-right: 5px;
+
+}
+
+.footer-logo {
+  animation: App-logo-spin infinite 20s linear;
+  float: left;
+  height: 20px;
+}
+
+
+
 
 @media only screen and (max-width: 495px){
   #reduceHeight {

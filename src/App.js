@@ -38,7 +38,20 @@ class App extends Component {
 
          </div>
        </div>
+
+       <div className="footer" >
+        <img src={logo} className="footer-logo" alt="logo" />
+
+        <div className="footer-links">
+            <a href="/contact" >Contact</a>
+
+            <a href="/terms">Terms of Use</a>
+          <p>© 2018 Octagon</p>
+
+
+        </div>
        </div>
+      </div>
     );
   }
 }
