@@ -1,34 +1,32 @@
 import React, { Component } from 'react';
 import { 
   BrowserRouter as Router, 
-  Route 
+  Route, Switch 
 } from 'react-router-dom';
 import logo from './logo.svg';
 import NavBar  from './components/NavBar';
 import './App.css';
 import HomePage from './components/Home';
+import Contact from './components/Contact'
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <Router>
-              <NavBar />
-        </Router>
-        </header>
+    <Router>
 
-        <Router>
+      <div className="App">
+          <header className="App-header">
+            <img src={logo} className="App-logo" alt="logo" />
+                <NavBar />
+            </header>
+
           <div className="main">
-            <Route path="/" component={HomePage}/>
-            <Route path="/contact" render={() => <div>Contact</div>} />
+              <Route exact path="/" component={HomePage} />
+              <Route path='/contact' component={Contact} />
           </div>
-        </Router>
 
        <div className="footer" >
         <img src={logo} className="footer-logo" alt="logo" />
-
         <div className="footer-links">
             <a href="/contact" >Contact</a>
 
@@ -37,6 +35,7 @@ class App extends Component {
         </div>
        </div>
       </div>
+    </Router>
     );
   }
 }
