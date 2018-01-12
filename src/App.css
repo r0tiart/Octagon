@@ -1,4 +1,6 @@
-.App {
+
+
+.main {
   text-align: center;
 }
 
@@ -11,9 +13,9 @@
 .App-header {
   background-color: grey;
   position: fixed;
-  height: 50px;
+  top: 0;
+  height: 50;
   width: 100%;
-  border: 20px;
 }
 
 .NavBar {
@@ -24,7 +26,7 @@
 }
 
 .main {
-  padding-top: 50px;
+  padding-top: 25px;
 }
 
 
@@ -42,11 +44,13 @@
   padding: 20px;
 }
 
-.footer{ 
-  background: grey;
-  padding: 20px;
+.footer {
+  right: 0;
+  bottom: 0;
+  left: 0;
+    padding: 1rem;
   height: 50px;
-  position: relative;
+  background-color: grey;
 }
 
 .footer-links{
