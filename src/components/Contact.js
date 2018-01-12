@@ -3,9 +3,8 @@ import React from 'react';
 const Contact = props => {
   return (
        <div className="main" > 
-        <p>TEST CONTACT</p>
-        <p></p>
-
+        <h1>Contact Form</h1>
+        
        </div>
   );
 };

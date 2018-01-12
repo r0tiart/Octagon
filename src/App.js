@@ -8,6 +8,7 @@ import NavBar  from './components/NavBar';
 import './App.css';
 import HomePage from './components/Home';
 import Contact from './components/Contact'
+import Terms from './components/Terms'
 
 class App extends Component {
   render() {
@@ -23,6 +24,7 @@ class App extends Component {
           <div className="main">
               <Route exact path="/" component={HomePage} />
               <Route path='/contact' component={Contact} />
+              <Route path='/terms' component={Terms} />
           </div>
 
        <div className="footer" >
