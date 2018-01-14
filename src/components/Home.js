@@ -5,7 +5,7 @@ const HomePage = props => {
        <div className="main" > 
          <div className="heroImage-container" id="fullwidth"> 
           <img
-              src={'http://www.returnofkings.com/wp-content/uploads/2015/01/american-hero1.jpg'} className="heroImage" id="reduceHeight"
+              src={'http://www.returnofkings.com/wp-content/uploads/2015/01/american-hero1.jpg'} className="heroImage" id="reduceHeight" alt="heroImage"
           />
          </div>
 

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { 
   BrowserRouter as Router, 
-  Route, Switch 
+  Route 
 } from 'react-router-dom';
 import logo from './logo.svg';
 import NavBar  from './components/NavBar';
