@@ -12,14 +12,14 @@ class Contact extends Component {
       email: '',
       avatar: ''
     };
-  }
+  };
 
   validateFirstName = event => {
     var letters = /^[A-Za-z]+$/;  
 
     if( event.target.value.match(letters) ){
       this.setState({
-        [event.target.className]: event.target.value        
+        [event.target.className]: event.target.value   
       });
 
       return true;
@@ -36,7 +36,7 @@ class Contact extends Component {
     // validator - regex for characters, hyphens and apostrophes 
     if( event.target.value.match(validator) ){
       this.setState({
-        [event.target.className]: event.target.value        
+        [event.target.className]: event.target.value 
       });
 
       return true;
@@ -53,9 +53,37 @@ class Contact extends Component {
     if ( !document.getElementsByClassName("email").email.value.match(
         /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/ 
         )){// check value to email regex 
-            event.preventDefault()
-            alert("Please entere a valid email")
+            
+            return false;
         } 
+
+        return true;
+  }
+
+  zipcodeCheck = event => {
+    if ( !document.getElementsByClassName("zipcode").zipcode.value.match(/^([0-9]{5}(?:-[0-9]{4})?)*$/) )
+        { 
+          return false;
+        }
+
+        return true;
+  }
+
+  validation = event => {
+    let validations = {};
+
+    validations.email = this.emailCheck(event);
+    validations.zipcode = this.zipcodeCheck(event);
+
+    if ( !validations.email && !validations.zipcode ){
+        alert("Please enter valid Email and Zipcode")
+        event.preventDefault()
+    } else if( !validations.email || !validations.zipcode ){
+      let failed = Object.keys(validations).filter( e => validations[e] === false )[0]
+
+      alert(`Please enter valid ${failed}`)
+      event.preventDefault()
+    }
   }
 
 
@@ -80,7 +108,14 @@ render(){
            <input type="email" className="email"
              name="email" />
          </div>
-         <button type="submit" className="btn btn-primary" onClick={ this.emailCheck } >
+
+         <div className="form-group">
+           <label htmlFor="firstName">Zipcode</label>
+           <input type="text" className="zipcode"
+             name="zipcode" />
+         </div>
+
+         <button type="submit" className="btn btn-primary" onClick={ this.validation } >
             Sign up
          </button>
        </form>
