@@ -48,6 +48,16 @@ class Contact extends Component {
     }
   }
 
+  emailCheck = event => {
+
+    if ( !document.getElementsByClassName("email").email.value.match(
+        /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/ 
+        )){// check value to email regex 
+            event.preventDefault()
+            alert("Please entere a valid email")
+        } 
+  }
+
 
 render(){
     return (
@@ -67,10 +77,10 @@ render(){
 
          <div className="form-group">
            <label htmlFor="email">Email address</label>
-           <input type="email" className="form-control"
+           <input type="email" className="email"
              name="email" />
          </div>
-         <button type="submit" className="btn btn-primary" >
+         <button type="submit" className="btn btn-primary" onClick={ this.emailCheck } >
             Sign up
          </button>
        </form>
