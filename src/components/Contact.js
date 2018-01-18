@@ -90,8 +90,8 @@ class Contact extends Component {
 
 render(){
     return (
-       <form className="form" name="form">
-         <h2>Sign up</h2>
+       <form className="form main" name="form">
+         <h2>Contact Us</h2>
          <div className="form-group">
            <label htmlFor="firstName">First Name</label>
            <input type="text" className="firstName" onChange={ this.validateFirstName.bind(this) }

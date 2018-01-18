@@ -28,6 +28,7 @@
 
 .main {
   padding-top: 25px;
+  margin-bottom: 50px
 }
 
 
@@ -46,10 +47,12 @@
 }
 
 .footer {
+
+  position: fixed;
   right: 0;
   bottom: 0;
   left: 0;
-    padding: 1rem;
+  padding: 1rem;
   height: 50px;
   background-color: grey;
 }
@@ -69,6 +72,12 @@
   animation: App-logo-spin infinite 20s linear;
   float: left;
   height: 20px;
+}
+
+.form-group {
+  text-align: center;
+  margin: 5px;
+  
 }
 
 
